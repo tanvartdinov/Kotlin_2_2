@@ -2,7 +2,7 @@ import java.time.LocalDateTime
 
 object WallService {
     private var posts = emptyArray<Post>()
-    private var nextId = 1
+    private var nextId = 0
 
     fun add(post: Post): Post {
         posts += post.copy(id = nextId)
@@ -20,5 +20,9 @@ object WallService {
         }
     }
 
+    fun clear() {
+        posts = emptyArray<Post>()
+        nextId = 0
+    }
 
 }

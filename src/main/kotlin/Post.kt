@@ -4,9 +4,9 @@ data class Post(
     val date: Int,
     val text: String,
     val friendsOnly: Boolean = false,
-    val comments: CommentsInfo,
+    val comments: CommentsInfo = CommentsInfo(),
     val copyright: Copyright,
-    val likes: LikesInfo,
+    val likes: LikesInfo = LikesInfo(),
     val postType: String = "post",
     val markedAsAds: Boolean = false,
     val isFavorite: Boolean = false
